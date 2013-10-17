@@ -12,7 +12,7 @@
 
 <p>This will open up in a vim session for you to view.</p>
 
-<p>Snippet Usage:</p>
+<p>Snippet Usage (any .xml file):</p>
 <code>snippetkeyword &lt;tab-key&gt;</code>
 <p>NOTE: Your insert mode must not be in paste mode!</p>
 <p>Easy way to get around this is to have a toggle that quickly changes this.  Add the below to your .vimrc</p>
