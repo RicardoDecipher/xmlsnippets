@@ -3,11 +3,11 @@
 <p>It is required that you have the <a href="https://github.com/msanders/snipmate.vim" target="_blank">snipmate</a> plugin installed.</p>
 
 Quickly install below:
-
+<code>
 git clone git://github.com/msanders/snipmate.vim.git
 cd snipmate.vim
 cp -R * ~/.vim
-
+</code>
 
 <p>To see all the snippet keywords, type the below command:</p>
 <p>grep 'snippet' ~/.vim/snippets/xml.snippets | vim -</p>
