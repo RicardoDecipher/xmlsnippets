@@ -14,6 +14,7 @@
 <p>NOTE: Your insert mode must not be in paste mode!</p>
 <p>Easy way to get around this is to have a toggle that quickly changes this.  Add the below to your .vimrc</p>
 <code>set pastetoggle=&lt;F3&gt;</code>
+<p>Pressing F3 when things don't seem to be working :)</p>
 
 <h3>Snippet Keywords:</h3>
 <p>To see all the snippet keywords, type the below command:</p>
