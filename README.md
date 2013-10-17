@@ -3,7 +3,7 @@
 <h3>Required:</h3>
 <p>vim <a href="https://github.com/msanders/snipmate.vim" target="_blank">snipmate</a> plugin installed. (See README.markdown for Quick install.)</p>
 
-<h3>Installation:</h3>
+<h3>Snippet Installation:</h3>
 <p>Download the file to the appropriate snippets folder.  Run the below command:</p>
 
 <code>wget -O ~/.vim/snippets/xml.snippets https://raw.github.com/minhdecipher/xmlsnippets/master/xml.snippets</code>
