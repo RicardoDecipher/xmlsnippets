@@ -4,12 +4,12 @@
 <p>vim <a href="https://github.com/msanders/snipmate.vim" target="_blank">snipmate</a> plugin installed. (See README.markdown for Quick install.)</p>
 
 <h3>Snippet Installation:</h3>
-<p>Download the file to the appropriate snippets folder.  Run the below command:</p>
+<p>Download the file to the appropriate snippets folder.  Run the below command in your shell:</p>
 
 <code>wget -O ~/.vim/snippets/xml.snippets https://raw.github.com/minhdecipher/xmlsnippets/master/xml.snippets</code>
 <p>Note: This will overwrite your current snippets file!</p>
 
-<h3>Snippet Usage (any .xml file):</h3>
+<h3>Snippet Usage (in any *.xml file):</h3>
 <code>snippetkeyword &lt;tab-key&gt;</code>
 <p>NOTE: Your insert mode must not be in paste mode!</p>
 <p>Easy way to get around this is to have a toggle that quickly changes this.  Add the below to your .vimrc</p>
