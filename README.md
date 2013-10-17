@@ -4,7 +4,7 @@
 
 <p>To install this file, run the below command:</p>
 
-<code>wget -O ~./vim/snippets/xml.snippets https://raw.github.com/minhdecipher/xmlsnippets/master/xml.snippets</code>
+<code>wget -O ~/.vim/snippets/xml.snippets https://raw.github.com/minhdecipher/xmlsnippets/master/xml.snippets</code>
 <p>Note: This will overwrite your current snippets file!</p>
 
 <p>To see all the snippet keywords, type the below command:</p>
