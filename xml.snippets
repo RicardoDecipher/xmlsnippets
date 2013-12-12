@@ -371,15 +371,27 @@ snippet states
 	<choice label="ch51">Wyoming</choice>
 
 #
-# AQ STYLES
+# DQ STYLES
 #
 
 snippet atm1d
-	  <uses>atm1d.${1:2}</uses>
-	${2}
+	  <uses>atm1d.${1:3}</uses>
+	  <atm1d:one_col>${2:0}</atm1d:one_col>
+	${3}
+snippet atmrating
+	  <uses>atmrating.${1:1}</uses>
+	  <atmrating:order>${2:lth}</atmrating:order>
+	  <atmrating:legendPosition>${3:Above}</atmrating:legendPosition>
+	  <atmrating:leftLegend>${4}</atmrating:leftLegend>
+	  <atmrating:midLegend>${5}</atmrating:midLegend>
+	  <atmrating:rightLegend>${6}</atmrating:rightLegend>
+	  <atmrating:containerWidth>${7:100%}</atmrating:containerWidth>
+	  <atmrating:OO_Text>${8}</atmrating:OO_Text>
+	${9}
 snippet atmtable
-	  <uses>atmtable.${1:1}</uses>
-	${2}
+	  <uses>atmtable.${1:2}</uses>
+	  <atmtable:row_dividers>${2:0}</atmtable:row_dividers>
+	${3}
 snippet autosum
 	  <uses>autosum.${1:1}</uses>
 	  <autosum:preText>${2}</autosum:preText>
@@ -434,11 +446,19 @@ snippet bcvideo
 	</checkbox>
 	<suspend/>
 snippet cardsort
-	  <uses>cardsort.${1:2}</uses>
-	  <cardsort:buttonPreviousHTML>${2:<i class='fa-icon-chevron-left'></i> Prev}</cardsort:buttonPreviousHTML>
-	  <cardsort:buttonNextHTML>${3:Next <i class='fa-icon-chevron-right'></i>}</cardsort:buttonNextHTML> 
-	  <cardsort:completionHTML>${4:<b>All done!</b><br/><i>Click the "Continue" button to proceed.</i>}</cardsort:completionHTML>
-	${5}
+	  <uses>cardsort.${1:3}</uses>
+	  <cardsort:automaticAdvance>${2:1}</cardsort:automaticAdvance>
+	  <cardsort:dragAndDrop>${3:1}</cardsort:dragAndDrop>
+	  <cardsort:animationDuration>${4:500}</cardsort:animationDuration>
+	  <cardsort:displayNavigation>${5:1}</cardsort:displayNavigation>
+	  <cardsort:buttonPreviousHTML>${6:<i class='fa-icon-chevron-left'></i> Prev}</cardsort:buttonPreviousHTML>
+	  <cardsort:buttonNextHTML>${7:Next <i class='fa-icon-chevron-right'></i>}</cardsort:buttonNextHTML>
+	  <cardsort:displayProgress>${8:1}</cardsort:displayProgress>
+	  <cardsort:displayCounter>${9:1}</cardsort:displayCounter>
+	  <cardsort:completionHTML>${10:<b>All done!</b><br/><i>Click the "Continue" button to proceed.</i>}</cardsort:completionHTML>
+	  <cardsort:wrapBuckets>${11:1}</cardsort:wrapBuckets>
+	  <cardsort:bucketsPerRow>${12:0}</cardsort:bucketsPerRow>
+	${13}
 snippet clickabletext
 	  <uses>clickabletext.${1:1}</uses>
 	${2}
@@ -446,13 +466,11 @@ snippet clickabletexttoggle
 	  <uses>clickabletexttoggle.${1:1}</uses>
 	${2}
 snippet fancyboxes
-	  <uses>fancyboxes.${1:1}</uses>
+	  <uses>fancyboxes.${1:2}</uses>
 	${2}
 snippet fir
-	  <uses>fir.${1:1}</uses>
-	  <fir:image_radio_css>${2}</fir:image_radio_css>
-	  <fir:image_checkbox_css>${3}</fir:image_checkbox_css>
-	${4}
+	  <uses>fir.${1:2}</uses>
+	${2}
 snippet greyout
 	  <uses>greyout.${1:1}</uses>
 	${2}
@@ -534,23 +552,30 @@ snippet multicol
 	  <multicol:count>${3:2}</multicol:count>
 	${4}
 snippet onerowatatime
-	  <uses>onerowatatime.${1:1}</uses>
+	  <uses>onerowatatime.${1:2}</uses>
 	${2}
+snippet quester
+	<textarea label="${1:Q1}" optional="0" size="25">
+	  <title>${2:Title Text}</title>
+	  <comment>${3:Comment Text}</comment>
+	  <uses>quester.${4:1}</uses>
+	  <quester:projectid>${5:Request From Quester}</quester:projectid>
+	  <quester:externalid>${uuid}</quester:externalid>
+	  <quester:debrand>${6:1}</quester:debrand>
+	  <row label="r1">Status</row>
+	  <row label="r2">Respondent ID</row>
+	  <row label="r3">Conversation</row>
+	</textarea>
+	<suspend/>
+	${7}
 snippet ranksort
-	  <uses>ranksort.${1:1}</uses>
+	  <uses>ranksort.${1:2}</uses>
 	  <ranksort:showBucketText>${2:1}</ranksort:showBucketText>
 	  <ranksort:showBucketNumber>${3:1}</ranksort:showBucketNumber>
 	${4}
 snippet ratingscale
-	  <uses>ratingscale.${1:1}</uses>
-	  <ratingscale:bubble_size>${2:38}</ratingscale:bubble_size>
-	  <ratingscale:bubble_img>${3:/survey/lib/steam/ratingscale/v1/ratingscale-both.png}</ratingscale:bubble_img>
-	  <ratingscale:hide_radio>${4:0}</ratingscale:hide_radio>
-	  <ratingscale:radio_img_size>${5:0}</ratingscale:radio_img_size>
-	  <ratingscale:radio_img>${6:/survey/lib/steam/ratingscale/v1/ratingscale-empty.png}</ratingscale:radio_img>
-	  <ratingscale:radio_selected_img>${7}</ratingscale:radio_selected_img>
-	  <ratingscale:radio_img_transition>${8:0}</ratingscale:radio_img_transition>
-	${9}
+	  <uses>ratingscale.${1:2}</uses>
+	${2}
 snippet scroll
 	  <uses>scroll.${1:1}</uses>
 	  <scroll:height>${2:200px}</scroll:height>
@@ -561,8 +586,25 @@ snippet separator
 	  <separator:space>${3}</separator:space>
 	  <separator:color>${4}</separator:color>
 	${5}
+snippet sliderdecimal
+	  <uses>sliderdecimal.${1:1}</uses>
+	  <sliderdecimal:sliderPosition>${2:Off Scale}</sliderdecimal:sliderPosition>
+	  <sliderdecimal:step>${3:.1}</sliderdecimal:step>
+	  <sliderdecimal:decimalPlaces>${4:2}</sliderdecimal:decimalPlaces>
+	  <sliderdecimal:legendPosition>${5:Below Slider}</sliderdecimal:legendPosition>
+	  <sliderdecimal:leftLegend>${6}</sliderdecimal:leftLegend>
+	  <sliderdecimal:midLegend>${7}</sliderdecimal:midLegend>
+	  <sliderdecimal:rightLegend>${8}</sliderdecimal:rightLegend>
+	  <sliderdecimal:showValue>${9:Above Slider}</sliderdecimal:showValue>
+	  <sliderdecimal:preText>${10}</sliderdecimal:preText>
+	  <sliderdecimal:postText>${11}</sliderdecimal:postText>
+	  <sliderdecimal:editable>${12:1}</sliderdecimal:editable>
+	  <sliderdecimal:showRange>${13:1}</sliderdecimal:showRange>
+	  <sliderdecimal:sliderWidth>${14:75%}</sliderdecimal:sliderWidth>
+	  <sliderdecimal:OO_Text>${15}</sliderdecimal:OO_Text>
+	${16}
 snippet slidernumber
-	  <uses>slidernumber.${1:2}</uses>
+	  <uses>slidernumber.${1:3}</uses>
 	  <slidernumber:sliderPosition>${2:Off Scale}</slidernumber:sliderPosition>
 	  <slidernumber:step>${3:1}</slidernumber:step>
 	  <slidernumber:legendPosition>${4:Below Slider}</slidernumber:legendPosition>
@@ -574,10 +616,23 @@ snippet slidernumber
 	  <slidernumber:postText>${10}</slidernumber:postText>
 	  <slidernumber:editable>${11:1}</slidernumber:editable>
 	  <slidernumber:showRange>${12:1}</slidernumber:showRange>
-	  <slidernumber:OO_Text>${13}</slidernumber:OO_Text>
-	  <slidernumber:offScaleText>${14}</slidernumber:offScaleText>
+	  <sliderdecimal:sliderWidth>${13:75%}</sliderdecimal:sliderWidth>
+	  <sliderdecimal:OO_Text>${14}</sliderdecimal:OO_Text>
 	${15}
 snippet starrating
-	  <uses>starrating.${1:1}</uses>
+	  <uses>starrating.${1:2}</uses>
 	  <starrating:tooltips>${2:1}</starrating:tooltips>
 	${3}
+snippet videoembed
+	<number label="${1:Q1}" size="3" optional="0">
+	  <title>${2:Title Text}</title>
+	  <comment>${3:Comment Text}</comment>
+	  <uses>videoembed.${4:1}</uses>
+	  <videoembed:embed>
+	    <![CDATA[
+	      ${5:<iframe src="//player.vimeo.com/video/77506709" width="500" height="281" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>}
+	    ]]>
+	  </videoembed:embed>
+	  <videoembed:mustWatch>${6:1}</videoembed:mustWatch>
+	</number>
+	${7}
