@@ -375,7 +375,7 @@ snippet states
 #
 
 snippet atm1d
-	  <uses>atm1d.${1:3}</uses>
+	  <uses>atm1d.${1:4}</uses>
 	  <atm1d:one_col>${2:0}</atm1d:one_col>
 	${3}
 snippet atmrating
@@ -392,6 +392,21 @@ snippet atmtable
 	  <uses>atmtable.${1:2}</uses>
 	  <atmtable:row_dividers>${2:0}</atmtable:row_dividers>
 	${3}
+snippet audio
+	<checkbox label="${1:Q1}">
+	  <uses>audio.${2:1}</uses>
+	  <audio:file>[rel ${3:file}.mp3]</audio:file>
+	  <audio:player>${4:circleplayer}</audio:player>
+	  <audio:must_listen>${5:1}</audio:must_listen>
+	  <audio:enable_seek>${6:0}</audio:enable_seek>
+	  <audio:enable_pause>${7:0}</audio:enable_pause>
+	  <audio:enable_replay>${8:0}</audio:enable_replay>
+	  <audio:enable_autoplay>${9:0}</audio:enable_autoplay>
+	  <audio:enable_autosubmit>${10:0}</audio:enable_autosubmit>
+	  <title>${11:Please listen to the following clip.}</title>
+	  <comment>${12:Please press play to listen to the audio clip.}</comment>
+	</checkbox>
+	<suspend/>
 snippet autosum
 	  <uses>autosum.${1:1}</uses>
 	  <autosum:preText>${2}</autosum:preText>
@@ -403,7 +418,7 @@ snippet bcme
 	<textarea label="${1:Q1}" optional="0" size="25">
 	  <title>${2:Title Text}</title>
 	  <comment>${3:Comment Text}</comment>
-	  <uses>bcme.${4:1}</uses>
+	  <uses>bcme.${4:2}</uses>
 	  <bcme:video_id>${5}</bcme:video_id>
 	  <bcme:width>${6:640}</bcme:width>
 	  <bcme:height>${7:360}</bcme:height>
@@ -554,6 +569,26 @@ snippet multicol
 snippet onerowatatime
 	  <uses>onerowatatime.${1:2}</uses>
 	${2}
+snippet pageturner
+	  <number label="${1:Q1}" size="5" optional="1">
+	    <uses>pageturner.${2:1}</uses>
+	    <pageturner:width>${3:780}</pageturner:width>
+	    <pageturner:height>${4:550}</pageturner:height>
+	    <pageturner:requiredPagesViewed>${5:0}</pageturner:requiredPagesViewed>
+	    <pageturner:display>${6:both}</pageturner:display>
+	    <pageturner:shadow>${7:0}</pageturner:shadow>
+	    <pageturner:peel>${8:none}</pageturner:peel>
+	    <pageturner:navigationPosition>${9:bottom}</pageturner:navigationPosition>
+	    <pageturner:buttonBack>${10:Previous Page}</pageturner:buttonBack>
+	    <pageturner:buttonLeft>${11:Enlarge Left}</pageturner:buttonLeft>
+	    <pageturner:buttonRight>${12:Enlarge Right}t</pageturner:buttonRight>
+	    <pageturner:buttonNext>${13:Next Page}</pageturner:buttonNext>
+	    <title>${14:Below is a magazine.  Please flip through it to view.}</title>
+	    <row label="r1"><img src="[rel image1.png]"/></row>
+	    <row label="r2"><img src="[rel image2.png]"/></row>
+	    <col label="c1">Timer (seconds)</col>
+	    <col label="c2">View Count</col>
+	  </number>
 snippet quester
 	<textarea label="${1:Q1}" optional="0" size="25">
 	  <title>${2:Title Text}</title>
@@ -619,10 +654,30 @@ snippet slidernumber
 	  <slidernumber:sliderWidth>${13:75%}</slidernumber:sliderWidth>
 	  <slidernumber:OO_Text>${14}</slidernumber:OO_Text>
 	${15}
+snippet sliderpoints
+	  <uses>sliderpoints.${1:1}</uses>
+	  <sliderpoints:sliderPosition>${2:Off Scale}</sliderpoints:sliderPosition>
+	  <sliderpoints:legendPosition>${3:Below Slider}</sliderpoints:legendPosition>
+	  <sliderpoints:showRange>${4:1}</sliderpoints:showRange>
+	  <sliderpoints:sliderWidth>${5:75%}</sliderpoints:sliderWidth>
+	${6}
 snippet starrating
 	  <uses>starrating.${1:2}</uses>
 	  <starrating:tooltips>${2:1}</starrating:tooltips>
 	${3}
+snippet timertest
+	<checkbox label="${1:Q1}">
+	  <uses>timertest.${2:1}</uses>
+	  <timertest:image>[rel ${3:image}.png]</timertest:image>
+	  <timertest:timerLimit>${4:10}</timertest:timerLimit>
+	  <timertest:counterPosition>${5:below}</timertest:counterPosition>
+	  <timertest:showCounter>${6:0}</timertest:showCounter>
+	  <timertest:primaryColor>${7}</timertest:primaryColor>
+	  <timertest:secondaryColor>${8}</timertest:secondaryColor>
+	  <title>${9:Take a look at this picture.  You will be automatically redirected when the timer reaches 0.}</title>
+	  <comment>${10:After 10 seconds, you will automatically be advanced}</comment>
+	</checkbox>
+	<suspend/>
 snippet videoembed
 	<number label="${1:Q1}" size="3" optional="0">
 	  <title>${2:Title Text}</title>
