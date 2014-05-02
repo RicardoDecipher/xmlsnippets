@@ -407,6 +407,7 @@ snippet audio
 	  <comment>${12:Please press play to listen to the audio clip.}</comment>
 	</checkbox>
 	<suspend/>
+	${13}
 snippet autosum
 	  <uses>autosum.${1:1}</uses>
 	  <autosum:preText>${2}</autosum:preText>
@@ -570,25 +571,27 @@ snippet onerowatatime
 	  <uses>onerowatatime.${1:2}</uses>
 	${2}
 snippet pageturner
-	  <number label="${1:Q1}" size="5" optional="1">
-	    <uses>pageturner.${2:1}</uses>
-	    <pageturner:width>${3:780}</pageturner:width>
-	    <pageturner:height>${4:550}</pageturner:height>
-	    <pageturner:requiredPagesViewed>${5:0}</pageturner:requiredPagesViewed>
-	    <pageturner:display>${6:both}</pageturner:display>
-	    <pageturner:shadow>${7:0}</pageturner:shadow>
-	    <pageturner:peel>${8:none}</pageturner:peel>
-	    <pageturner:navigationPosition>${9:bottom}</pageturner:navigationPosition>
-	    <pageturner:buttonBack>${10:Previous Page}</pageturner:buttonBack>
-	    <pageturner:buttonLeft>${11:Enlarge Left}</pageturner:buttonLeft>
-	    <pageturner:buttonRight>${12:Enlarge Right}t</pageturner:buttonRight>
-	    <pageturner:buttonNext>${13:Next Page}</pageturner:buttonNext>
-	    <title>${14:Below is a magazine.  Please flip through it to view.}</title>
-	    <row label="r1"><img src="[rel image1.png]"/></row>
-	    <row label="r2"><img src="[rel image2.png]"/></row>
-	    <col label="c1">Timer (seconds)</col>
-	    <col label="c2">View Count</col>
-	  </number>
+	<number label="${1:Q1}" size="5" optional="1">
+	  <uses>pageturner.${2:1}</uses>
+	  <pageturner:width>${3:780}</pageturner:width>
+	  <pageturner:height>${4:550}</pageturner:height>
+	  <pageturner:requiredPagesViewed>${5:0}</pageturner:requiredPagesViewed>
+	  <pageturner:display>${6:both}</pageturner:display>
+	  <pageturner:shadow>${7:0}</pageturner:shadow>
+	  <pageturner:peel>${8:none}</pageturner:peel>
+	  <pageturner:navigationPosition>${9:bottom}</pageturner:navigationPosition>
+	  <pageturner:buttonBack>${10:Previous Page}</pageturner:buttonBack>
+	  <pageturner:buttonLeft>${11:Enlarge Left}</pageturner:buttonLeft>
+	  <pageturner:buttonRight>${12:Enlarge Right}t</pageturner:buttonRight>
+	  <pageturner:buttonNext>${13:Next Page}</pageturner:buttonNext>
+	  <title>${14:Below is a magazine.  Please flip through it to view.}</title>
+	  <row label="r1"><img src="[rel image1.png]"/></row>
+	  <row label="r2"><img src="[rel image2.png]"/></row>
+	  <col label="c1">Timer (seconds)</col>
+	  <col label="c2">View Count</col>
+	</number>
+	<suspend/>
+	${15}
 snippet quester
 	<textarea label="${1:Q1}" optional="0" size="25">
 	  <title>${2:Title Text}</title>
@@ -678,6 +681,7 @@ snippet timertest
 	  <comment>${10:After 10 seconds, you will automatically be advanced}</comment>
 	</checkbox>
 	<suspend/>
+	${11}
 snippet videoembed
 	<number label="${1:Q1}" size="3" optional="0">
 	  <title>${2:Title Text}</title>
